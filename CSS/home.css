@@ -1,0 +1,60 @@
+body {
+    background: #EEEEEE;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 100px;
+    padding: 50px 0 0 0;
+    margin: 0;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+nav li {
+    padding: 3px 15px 3px 15px;
+}
+
+nav li:nth-child(even) {
+    border-width: 1px;
+    border-color: #000000;
+    border-style: none solid none;
+}
+
+main {
+    display: flex;
+    flex-flow: row;
+    min-width: 980px; 
+    width: 60%;
+    height: auto;
+    margin: 7% auto;
+}
+
+section {
+    margin: 0 12px 0 12px;
+}
+
+#profilowe {
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+}

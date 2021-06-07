@@ -1,0 +1,1 @@
+Projekt strony pisany na zaliczenie zajęć "Podstawy Aplikacji Internetowych"
