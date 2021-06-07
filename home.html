@@ -4,6 +4,8 @@
         <link rel="stylesheet" href="CSS/home.css" type="text/css" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/home.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Moja strona CV</title>
     </head>
     <body>
@@ -29,26 +31,28 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Sed cras ornare arcu dui vivamus arcu felis bibendum. At lectus urna duis convallis convallis tellus id interdum velit. 
                     Id ornare arcu odio ut sem nulla pharetra. </p>
-                <ul id="przyciski">
-                    <li>Kontynuuj</li>
-                    <li>Projekty</li>
-                    <li>Kontakt</li>
+                <ul class="przyciski">
+                    <li id="przycisk1">Kontynuuj</li>
+                    <li id="przycisk2">Projekty</li>
+                    <li id="przycisk3">Kontakt</li>
                 </ul>
             </section>
         </main>
         <footer>
             <section>
                 <h4>Telefon</h4>
-                <p>123 123 123</p>
+                <p>123123123</p>
             </section>
             <section> 
                 <h4>E-mail</h4>
                 <p>testmail@mail.com</p>
             </section>
             <section> 
-                <h4>Follow Me</h4>
-                <img src="img/linkedin-ikona.png"/>
-                <img src="img/Twitter-logo.png"/>
+                <h4>Follow Me</h4> <br/>
+                <div id="follows-img">
+                    <img class="logo" src="img/linkedin-ikona.png"/>
+                    <img class="logo" src="img/Twitter-logo.png"/>
+                </div>
             </section>
             <section> 
                 <p>&copy 2021 By Marcin Bernecki</p>
