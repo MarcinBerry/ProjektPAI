@@ -42,7 +42,7 @@ nav li:nth-child(even) {
 }
 
 main {
-    display: flex;
+    display: none;
     flex-flow: row;
     min-width: 980px; 
     width: 60%;
