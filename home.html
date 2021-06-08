@@ -2,25 +2,15 @@
 <html lang="pl">
     <head>
         <link rel="stylesheet" href="CSS/home.css" type="text/css" />
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Advent+Pro&subset=latin,latin-ext'  type='text/css'/>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="JS/home.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                /*$('main').animate({
-                    height: '200px'
-                }, { duration: 2000, queue: false});
-                $('main').slideUp(3000);
-                $('main').fadeIn(3000);
-                */
-               $('main').fadeIn(3000).css("display", "flex");
-               
-            });
-        </script>
         <title>Moja strona CV</title>
     </head>
-    <body>
+    <body onload="homeInit()">
         <nav>
             <section>
                 <h4>Bernecki Marcin</h4>
@@ -43,11 +33,11 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Sed cras ornare arcu dui vivamus arcu felis bibendum. At lectus urna duis convallis convallis tellus id interdum velit. 
                     Id ornare arcu odio ut sem nulla pharetra. </p>
-                <ul class="przyciski">
-                    <li id="przycisk1">Kontynuuj</li>
-                    <li id="przycisk2">Projekty</li>
-                    <li id="przycisk3">Kontakt</li>
-                </ul>
+                <div class="przyciski">
+                    <div id="przycisk1"><a href="wiecej.html" target="_self">Kontynuuj</a></div>
+                    <div id="przycisk2">Projekty</div>
+                    <div id="przycisk3">Kontakt</div>
+                </div>
             </section>
         </main>
         <footer>
