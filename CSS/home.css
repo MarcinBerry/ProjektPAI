@@ -67,7 +67,7 @@ section {
     border-radius: 50%;
 }
 
-.przyciski {
+.przyciski-box {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -75,7 +75,7 @@ section {
     padding: 0;
 }
 
-.przyciski div {
+.przyciski {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -91,21 +91,13 @@ section {
     font-size: larger;
 }
 
-#przycisk1 {
-    background: #FF0000;
+.przyciski {
+    background: #000000;
     transition: background 0.5s;
 }
 
-#przycisk1:hover {
-    background:transparent
-}
-
-#przycisk2 {
-    background: var(--przycisk2-kolor);
-}
-
-#przycisk3 {
-    background: var(--przycisk3-kolor);
+.przyciski:hover {
+    background: transparent;
 }
 
 footer {
