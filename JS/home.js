@@ -1,31 +1,31 @@
 function homeInit() {
     $(document).ready(function () { 
         $('main').fadeIn(500).css("display", "flex");
-        var buttonsCount = $('.przyciski');
-        var testText = "";
-        var tab = [];
+        var buttonsCount = $('.przyciski'); 
         for(var i = 1; i <= buttonsCount.length; i++) {
-            tab[i] = i*50;
-            $('.przyciski:nth-child('+i+')').css("background", "rgb("+tab[i]+", 150, 150)");
+            $('.przyciski:nth-child('+i+')').css("background", "var(--color"+(i+1)+")");
             $('.przyciski:nth-child(n)').css("transition", "background 0.5s");
-            
+         
         }
-
-        // $('#przycisk1').mouseenter(function() {
-        //     $(this).css("background", "transparent");
-        // });
-       
 
         $('.przyciski:nth-child(n)').mouseenter(function() {
             $(this).css("background", "transparent");
         })
 
         $('.przyciski:nth-child(n)').mouseleave(function() {
-            $(this).css("background", "#ffff00");
-        })
+            for(var i = 1; i<= buttonsCount.length; i++) {
+            $(".przyciski:nth-child("+i+")").css("background", "var(--color"+(i+1)+")");
+            }
+        });
 
-        $('#test').text(testText)
-        
     });
 
+}
+function przejdzDo() {
+    $('main').fadeOut(500, function() {
+        $('main').load("wiecej.html", function() {
+            alert("load was performed");
+        });
+    }).fadeIn(500);
+    
 }

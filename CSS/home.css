@@ -1,8 +1,8 @@
 body {
-    --tlo-kolor: #dddddd;
-    --przycisk1-kolor: #FF5555;
-    --przycisk2-kolor: #55FF55;
-    --przycisk3-kolor: #5555FF;
+    --color1: #dddddd;
+    --color2: #FF5555;
+    --color3: #55FF55;
+    --color4: #5555FF;
     --czcionka-kolor: #000000;
     background: var(--tlo-kolor);
     margin: 0;
