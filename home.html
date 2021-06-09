@@ -12,14 +12,21 @@
     <body onload="homeInit()">
         <nav>
             <section>
-                <h4>Bernecki Marcin</h4>
+                <a href="home.html">
+                    <h4>Bernecki Marcin</h4>
+                </a>
             </section>
             <section>
-                <ul>
-                    <li>Kontynuuj</li>
-                    <li>Projekty</li>
-                    <li>Kontakt</li>
-                </ul>
+                <div class="przyciski-nav-box">
+                    <a href="wiecej.html">
+                        <!--<div class="przyciski-nav" onclick="przejdzDo('wiecej.html')">Kontynuuj</div> -->
+                        <div class="przyciski-nav">Kontynuuj</div>
+                    </a>
+                    <div class="przyciski-nav" onclick="zmienDo('projekty')">Projekty</div>
+                    <a href="kontakt.html">
+                        <div class="przyciski-nav" >Kontakt</div>
+                    </a>
+                </div>
             </section>
         </nav>
         <main id="main">

@@ -30,19 +30,17 @@ nav {
     flex-flow: row wrap;
     justify-content: space-between;
 }
-
-nav ul {
+.przyciski-nav-box {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
 }
 
-nav li {
-    padding: 3px 15px 3px 15px;
-    list-style-type: none;
+.przyciski-nav {
+    padding: 3px 10px 3px 10px;
+    cursor: pointer;
 }
 
-nav li:nth-child(even) {
+.przyciski-nav:nth-child(even) {
     border-width: 1px;
     border-color: #000000;
     border-style: none solid none;
