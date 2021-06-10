@@ -1,8 +1,9 @@
 body {
-    --color1: #dddddd;
-    --color2: #FF5555;
-    --color3: #55FF55;
-    --color4: #5555FF;
+    --color1: #FF5555;
+    --color2: #55FF55;
+    --color3: #5555FF;
+    --color4: #444444;
+    --homeButton-color: #CC77BB;
     --czcionka-kolor: #000000;
     background: var(--tlo-kolor);
     margin: 0;
@@ -95,9 +96,6 @@ section {
     cursor: pointer;
     font-weight: bolder;
     font-size: larger;
-}
-
-.przyciski {
     transition: background 0.5s;
 }
 
@@ -143,4 +141,20 @@ article {
 .zdjecie-projektu {
     width: 490px;
     height: 330px;
+}
+
+#homePrzycisk {
+    font-weight: 900;
+    font-size: larger;
+    cursor: pointer;
+    background: var(--homeButton-color);
+    border-radius: 40%;
+}
+
+#testowyPrzycisk {
+    font-weight: 900;
+    font-size: larger;
+    cursor: pointer;
+    background: var(--homeButton-color);
+    border-radius: 40%;
 }

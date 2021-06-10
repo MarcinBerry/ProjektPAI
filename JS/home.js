@@ -8,19 +8,38 @@ function homeInit() {
     });  
 }
 
+function testowaFunkcja() {
+    generujPrzycisk(".przyciski-box", "projekty", "TEST");
+}
+
+function generujPrzycisk(divBox, odnosnik, tytul) {
+    var htmlPrzycisku = '<div class="przyciski" onclick="przejdzDo("'+odnosnik+'")">'+tytul+'</div>'
+    $(divBox).append(htmlPrzycisku);
+
+    var numerPrzycisku = $('.przyciski').length;
+    alert(numerPrzycisku);
+    $('.przyciski:nth-child('+numerPrzycisku+')').css("background", "var(--color"+numerPrzycisku+")");
+    
+    $('.przyciski:nth-child('+numerPrzycisku+')').mouseenter(function() {
+        this.css("background", "transparent");
+    });
+    
+    $('.przyciski:nth-child('+numerPrzycisku+')').mouseleave(function() {
+        this.css("background", "var(--color"+numerPrzycisku+")");
+    });
+
+}
+
 function przejdzDo(strona) {
     switch(strona) 
     {
         case 'projekty': generujProjekty(); break;
         case 'home': generujHome(); break;
-        case 'kontakt': generujKontakt(); break;
         default: alert("coś poszło nie tak");
     }
 }
 
-function generujKontakt() {
-    
-}
+
 
 function generujProjekty() {
     $('main').fadeOut(500, function() {
@@ -70,7 +89,7 @@ function generujHome() {
 function kolorujPrzyciski() {
     var buttonsCount = $('.przyciski'); 
     for(var i = 1; i <= buttonsCount.length; i++) {
-        $('.przyciski:nth-child('+i+')').css("background", "var(--color"+(i+1)+")");
+        $('.przyciski:nth-child('+i+')').css("background", "var(--color"+i+")");
         $('.przyciski:nth-child(n)').css("transition", "background 0.5s");
     }
 
@@ -80,7 +99,8 @@ function kolorujPrzyciski() {
 
     $('.przyciski:nth-child(n)').mouseleave(function() {
         for(var i = 1; i<= buttonsCount.length; i++) {
-        $(".przyciski:nth-child("+i+")").css("background", "var(--color"+(i+1)+")");
+        $(".przyciski:nth-child("+i+")").css("background", "var(--color"+i+")");
         }
     });
+
 }
