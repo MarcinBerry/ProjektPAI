@@ -11,21 +11,15 @@
     </head>
     <body onload="homeInit()">
         <nav>
-            <section>
-                <a href="home.html">
+            <section onclick="przejdzDo('home')">
                     <h4>Bernecki Marcin</h4>
-                </a>
             </section>
             <section>
                 <div class="przyciski-nav-box">
-                    <a href="wiecej.html">
-                        <!--<div class="przyciski-nav" onclick="przejdzDo('wiecej.html')">Kontynuuj</div> -->
-                        <div class="przyciski-nav">Kontynuuj</div>
-                    </a>
-                    <div class="przyciski-nav" onclick="zmienDo('projekty')">Projekty</div>
-                    <a href="kontakt.html">
-                        <div class="przyciski-nav" >Kontakt</div>
-                    </a>
+                    <!--<div class="przyciski-nav" onclick="przejdzDo('wiecej.html')">Kontynuuj</div> -->
+                    <div class="przyciski-nav" onclick="przejdzDo('wiecej')">Więcej</div>
+                    <div class="przyciski-nav" onclick="przejdzDo('projekty')">Projekty</div>
+                    <div class="przyciski-nav" onclick="przejdzDo('kontakt')">Kontakt</div>
                 </div>
             </section>
         </nav>
@@ -41,9 +35,9 @@
                     Sed cras ornare arcu dui vivamus arcu felis bibendum. At lectus urna duis convallis convallis tellus id interdum velit. 
                     Id ornare arcu odio ut sem nulla pharetra. </p>
                 <div class="przyciski-box">
-                    <div class="przyciski" onclick="przejdzDo()">Kontynuuj</div>
-                    <div class="przyciski" >Projekty</div>
-                    <div class="przyciski" >Kontakt</div>
+                    <div class="przyciski" onclick="przejdzDo('wiecej')">Więcej</div>
+                    <div class="przyciski" onclick="przejdzDo('projekty')">Projekty</div>
+                    <div class="przyciski" onclick="przejdzDo('kontakt')">Kontakt</div>
                 </div>
             </section>
         </main>
