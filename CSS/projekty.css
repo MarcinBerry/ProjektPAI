@@ -3,7 +3,7 @@
     flex-flow: column;
     min-height: 100%;
     width:75%;
-    margin: 7% auto 15% auto;
+    margin: 7% auto 10% auto;
 }
 
 .opis-projektu {
@@ -13,4 +13,8 @@
 .zdjecie-projektu {
     width: 490px;
     height: 330px;
+}
+
+.projekt {
+    margin: 8% 0 3% 0;
 }
