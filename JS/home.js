@@ -1,19 +1,12 @@
+var homeContent = "12";
+
 function homeInit() {
-    generujHome();
     $(document).ready(function () { 
+        homeContent = $('main').clone(true);
         $('main').fadeIn(500).css("display", "flex");
         kolorujPrzyciski();
     });  
 }
-
-// function przejdzDo(strona) {
-//     $('main').fadeOut(500, function() {
-//         $('main').load(strona, function() {
-//             alert("load was performed");
-//         });
-//     }).fadeIn(500);
-    
-// }
 
 function przejdzDo(strona) {
     switch(strona) 
@@ -63,7 +56,7 @@ function generujHome() {
             + '</div>'
             + '</div>'
             +'</section>'
-        ).css("flex-flow", "row")
+        ).attr("id", "home").css("flex-flow", "row");
         kolorujPrzyciski();
     }).fadeIn(500);
 }
