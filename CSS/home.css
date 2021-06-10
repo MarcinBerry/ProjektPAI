@@ -18,7 +18,6 @@ h1 {
     font-size: 100px;
     padding: 50px 0 0 0;
     margin: 0;
-    letter-spacing: 7px;
 }
 
 h3 {
@@ -53,6 +52,14 @@ nav {
     min-width: 980px; 
     width: 60%;
     min-height: 100%;
+    margin: 7% auto 15% auto;
+}
+
+#projekty {
+    display: none;
+    flex-flow: column;
+    min-height: 100%;
+    width:75%;
     margin: 7% auto 15% auto;
 }
 
@@ -129,3 +136,11 @@ article {
     width: 90%;
 }
 
+.opis-projektu {
+    width: 40%;
+}
+
+.zdjecie-projektu {
+    width: 490px;
+    height: 330px;
+}
