@@ -46,11 +46,18 @@ nav {
     border-style: none solid none;
 }
 
-main {
+#home {
     display: none;
     flex-flow: row;
     min-width: 980px; 
     width: 60%;
+    min-height: 100%;
+    margin: 7% auto 15% auto;
+}
+
+#projekty {
+    display: none;
+    flex-flow: column;
     min-height: 100%;
     margin: 7% auto 15% auto;
 }
