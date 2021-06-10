@@ -2,21 +2,34 @@ function homeInit() {
     generujHome();
     $(document).ready(function () { 
         $('main').fadeIn(500).css("display", "flex");
+        kolorujPrzyciski();
     });  
 }
+
+// function przejdzDo(strona) {
+//     $('main').fadeOut(500, function() {
+//         $('main').load(strona, function() {
+//             alert("load was performed");
+//         });
+//     }).fadeIn(500);
+    
+// }
 
 function przejdzDo(strona) {
     switch(strona) 
     {
+<<<<<<< HEAD
         case 'projekty': shiftTo(generujProjekty()); break;
         case 'home': shiftTo(generujHome()); break;
 =======
         case 'projekty': generujProjekt(); break;
         case 'home': generujHome(); break;
+>>>>>>> parent of d710e50 (Optymalizacja, zautomatyzowanie dodawania projektów do strony)
         default: alert("coś poszło nie tak");
     }
 }
 
+<<<<<<< HEAD
 function generujProjekty() {
     $('main').attr("id", "projekty").html("<h1>Projekty</h1>");
     for(var i = 0; i < 3; i++) {            
@@ -121,8 +134,10 @@ function generujHome() {
         ).css("flex-flow", "row")
         kolorujPrzyciski();
     }).fadeIn(500);
+>>>>>>> parent of d710e50 (Optymalizacja, zautomatyzowanie dodawania projektów do strony)
 }
 
+function kolorujPrzyciski() {
     var buttonsCount = $('.przyciski'); 
     for(var i = 1; i <= buttonsCount.length; i++) {
         $('.przyciski:nth-child('+i+')').css("background", "var(--color"+(i+1)+")");
