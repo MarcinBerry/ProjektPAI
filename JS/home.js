@@ -3,24 +3,9 @@ function homeInit() {
     $(document).ready(function () { 
         $('main').fadeIn(500).css("display", "flex");
         var buttonsCount = $('.przyciski'); 
-        for(var i = 1; i <= buttonsCount.length; i++) {
-            $('.przyciski:nth-child('+i+')').css("background", "var(--color"+(i+1)+")");
-            $('.przyciski:nth-child(n)').css("transition", "background 0.5s");
-         
-        }
-
-        $('.przyciski:nth-child(n)').mouseenter(function() {
-            $(this).css("background", "transparent");
-        })
-
-        $('.przyciski:nth-child(n)').mouseleave(function() {
-            for(var i = 1; i<= buttonsCount.length; i++) {
-            $(".przyciski:nth-child("+i+")").css("background", "var(--color"+(i+1)+")");
-            }
-        });
+        kolorujPrzyciski();
 
     });
-
 }
 
 // function przejdzDo(strona) {
@@ -59,6 +44,25 @@ function generujProjekty() {
         ).css("flex-flow", "column")
     }).fadeIn(500);
 }
+
+function kolorujPrzyciski() {
+    var buttonsCount = $('.przyciski'); 
+    for(var i = 1; i <= buttonsCount.length; i++) {
+        $('.przyciski:nth-child('+i+')').css("background", "var(--color"+(i+1)+")");
+        $('.przyciski:nth-child(n)').css("transition", "background 0.5s");
+    }
+
+    $('.przyciski:nth-child(n)').mouseenter(function() {
+        $(this).css("background", "transparent");
+    })
+
+    $('.przyciski:nth-child(n)').mouseleave(function() {
+        for(var i = 1; i<= buttonsCount.length; i++) {
+        $(".przyciski:nth-child("+i+")").css("background", "var(--color"+(i+1)+")");
+        }
+    });
+}
+
 function generujHome() {
     $('main').fadeOut(500, function() {
         $('main').html(
@@ -73,11 +77,15 @@ function generujHome() {
             + 'Sed cras ornare arcu dui vivamus arcu felis bibendum. At lectus urna duis convallis convallis tellus id interdum velit. '
             + 'Id ornare arcu odio ut sem nulla pharetra. </p>'
             + '<div class="przyciski-box">'
-            + '<div class="przyciski" onclick="przejdzDo()">Kontynuuj</div>'
-            + '<div class="przyciski" >Projekty</div>'
-            + '<div class="przyciski" >Kontakt</div>'
+            + '<div class="przyciski" onload="kolorujPrzyciski()">Więcej</div>'
+            + '<div class="przyciski" onclick="przejdzDo(\'projekty\')">Projekty</div>'
+            + '<div class="przyciski" onclick="przejdzDo(\'kontakt\')">Kontakt</div>'
+            + '</div>'
             + '</div>'
             +'</section>'
         ).css("flex-flow", "row")
+        kolorujPrzyciski();
     }).fadeIn(500);
 }
+
+
