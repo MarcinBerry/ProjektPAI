@@ -2,10 +2,12 @@
     display: none;
     flex-flow: column;
     min-height: 100%;
-    width:75%;
-    margin: 7% auto 15% auto;
+    width: 75%;
+    margin: 5% auto 7% auto;
 }
-
+.projekt {
+    margin: 10% 0 0 0;
+}
 .opis-projektu {
     width: 40%;
 }
