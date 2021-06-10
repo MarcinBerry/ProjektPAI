@@ -1,0 +1,16 @@
+#projekty {
+    display: none;
+    flex-flow: column;
+    min-height: 100%;
+    width:75%;
+    margin: 7% auto 15% auto;
+}
+
+.opis-projektu {
+    width: 40%;
+}
+
+.zdjecie-projektu {
+    width: 490px;
+    height: 330px;
+}

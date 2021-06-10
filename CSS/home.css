@@ -59,6 +59,7 @@ nav {
     display: none;
     flex-flow: column;
     min-height: 100%;
+    width:75%;
     margin: 7% auto 15% auto;
 }
 
@@ -109,9 +110,7 @@ footer {
     flex-flow: row;
     justify-content: space-between;
 }
-#wrapper {
-    min-height: 100%;
-}
+
 footer section {
     display: flex;
     flex-flow: column;
@@ -135,6 +134,10 @@ article {
     text-align: left;
     justify-content: space-between;
     width: 90%;
+}
+
+.opis-projektu {
+    width: 40%;
 }
 
 .zdjecie-projektu {
