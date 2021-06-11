@@ -10,11 +10,7 @@ body {
     padding: 0;
     font-family: 'Advent Pro', sans-serif;
 }
-a {
-    text-decoration: none;
-    color: var(--czcionka-kolor);
-    
-}
+
 h1 {
     font-size: 100px;
     padding: 50px 0 0 0;
@@ -54,18 +50,6 @@ nav {
     width: 60%;
     min-height: 100%;
     margin: 7% auto 15% auto;
-}
-
-#projekty {
-    display: none;
-    flex-flow: column;
-    min-height: 100%;
-    width:75%;
-    margin: 7% auto 15% auto;
-}
-
-section {
-    margin: 0 12px 0 12px;
 }
 
 #profilowe {
@@ -132,15 +116,6 @@ article {
     text-align: left;
     justify-content: space-between;
     width: 90%;
-}
-
-.opis-projektu {
-    width: 40%;
-}
-
-.zdjecie-projektu {
-    width: 490px;
-    height: 330px;
 }
 
 #homePrzycisk {
