@@ -2,14 +2,17 @@ var homeContent = "";
 
 function homeInit() {
     $(document).ready(function () { 
+        generujPrzycisk(".przyciski-box", "wiecej", "Wiecej");
+        generujPrzycisk(".przyciski-box", "projekty", "Projekty");
+        generujPrzycisk(".przyciski-box", "kontakt", "Kontakt");
         homeContent = $('main').html();
         $('main').fadeIn(500).css("display", "flex");
-        kolorujPrzyciski();
     });  
 }
 
 function testowaFunkcja() {
-    generujPrzycisk(".przyciski-box", "projekty", "TEST");
+
+
 }
 
 function generujPrzycisk(divBox, odnosnik, tytul) {
@@ -37,8 +40,6 @@ function przejdzDo(strona) {
         default: alert("coś poszło nie tak");
     }
 }
-
-
 
 function generujProjekty() {
     $('main').fadeOut(500, function() {
@@ -83,23 +84,4 @@ function generujHome() {
         $('main').html(homeContent).attr("id", "home").css("flex-flow", "row");
         kolorujPrzyciski();
     }).fadeIn(500);
-}
-
-function kolorujPrzyciski() {
-    var buttonsCount = $('.przyciski'); 
-    for(var i = 1; i <= buttonsCount.length; i++) {
-        $('.przyciski:nth-child('+i+')').css("background", "var(--color"+i+")");
-        $('.przyciski:nth-child(n)').css("transition", "background 0.5s");
-    }
-
-    $('.przyciski:nth-child(n)').mouseenter(function() {
-        $(this).css("background", "transparent");
-    })
-
-    $('.przyciski:nth-child(n)').mouseleave(function() {
-        for(var i = 1; i<= buttonsCount.length; i++) {
-        $(".przyciski:nth-child("+i+")").css("background", "var(--color"+i+")");
-        }
-    });
-
 }
