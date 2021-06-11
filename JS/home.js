@@ -13,19 +13,18 @@ function testowaFunkcja() {
 }
 
 function generujPrzycisk(divBox, odnosnik, tytul) {
-    var htmlPrzycisku = '<div class="przyciski" onclick="przejdzDo("'+odnosnik+'")">'+tytul+'</div>'
+    var htmlPrzycisku = '<div class="przyciski" onclick="przejdzDo(\''+odnosnik+'\')">'+tytul+'</div>'
     $(divBox).append(htmlPrzycisku);
 
     var numerPrzycisku = $('.przyciski').length;
-    alert(numerPrzycisku);
     $('.przyciski:nth-child('+numerPrzycisku+')').css("background", "var(--color"+numerPrzycisku+")");
     
     $('.przyciski:nth-child('+numerPrzycisku+')').mouseenter(function() {
-        this.css("background", "transparent");
+        $(this).css("background", "transparent");
     });
-    
+
     $('.przyciski:nth-child('+numerPrzycisku+')').mouseleave(function() {
-        this.css("background", "var(--color"+numerPrzycisku+")");
+        $(this).css("background", "var(--color"+numerPrzycisku+")");
     });
 
 }
