@@ -14,6 +14,15 @@ function testowaFunkcja() {
 
 }
 
+function generujHome() {
+    $('main').fadeOut(500, function() {
+        $('main').html(homeContent).attr("id", "home").css("flex-flow", "row");
+        generujPrzycisk(".przyciski-box", "wiecej", "Wiecej");
+        generujPrzycisk(".przyciski-box", "projekty", "Projekty");
+        generujPrzycisk(".przyciski-box", "kontakt", "Kontakt");
+    }).fadeIn(500);
+}
+
 function generujPrzycisk(divBox, odnosnik, tytul) {
     var htmlPrzycisku = '<div class="przyciski" onclick="przejdzDo(\''+odnosnik+'\')">'+tytul+'</div>'
     $(divBox).append(htmlPrzycisku);
@@ -40,48 +49,37 @@ function przejdzDo(strona) {
         default: alert("coś poszło nie tak");
     }
 }
-
-function generujHome() {
-    $('main').fadeOut(500, function() {
-        $('main').html(homeContent).attr("id", "home").css("flex-flow", "row");
-        generujPrzycisk(".przyciski-box", "wiecej", "Wiecej");
-        generujPrzycisk(".przyciski-box", "projekty", "Projekty");
-        generujPrzycisk(".przyciski-box", "kontakt", "Kontakt");
-    }).fadeIn(500);
-}
-
 function generujWiecej() {
-    var content = "<h3>Więcej</h3>"
-    +"<section class='doswiadczenie'>"
-    +"<h4>Doświadczenie</h4>"
-    +"</section>"
-
     $('main').fadeOut(500, function() {
-        $('main').html(content).attr("id", "projekty").css("flex-flow", "column");
-        generujWpis();
+        $('main').html("<h3>Wiecej</h3>").attr("id", "projekty").css("flex-flow", "column");
+        generujRozdzial("doswiadczenie", "Mój Tytuł");
+        generujWpis("doswiadczenie");
+        generujWpis("doswiadczenie");
     }).fadeIn(500);
 }
 
-function generujWpis(data, tytul, opis) {
-    var ty = tytul;
-    var op = opis;
-    var dat = data;
-    
-    if(ty === undefined) {
-        ty = "Przykładowy tytuł";
-    }
-
-    if(op === undefined) {
-        op = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-    }
-    if(dat === undefined) {
-        dat = "2020 - Present";
-    }
-    
+function generujRozdzial(klasa = "przykladowa", tytul = "Przykładowy tytuł") {
     var content = 
-    "<div><p>"+data+"</p></div"
-    +"<div><h5>"+tytul+"</h5>"
-    +"<p>"+opis+"</p><d/iv>"
+    "<section class='"+klasa+"'>"
+    +"<div class='"+klasa+"-tytul'><h4>"+tytul+"</h4></div>"
+    +"<div class='"+klasa+"-wpisy'></div></section>"
+    +"<hr style='width: 100%'/>";
 
-    $('.doswiadczenie').append(content);
+    $('main').append(content);
+    $('.'+klasa+'-wpisy').css({"display": "flex", "flex-flow": "column"})
+    $('.'+klasa).css({"display": "flex", "flex-flow": "row", "justify-content": "space-between"});
+    
+}
+
+function generujWpis(klasa = "przykladowa",
+    data = "2020 - TEST",
+    tytul = "Przykładowy tytuł",
+    opis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.") 
+    {
+    var content = 
+    "<div class='wpis'><div><p>"+data+"</p></div>"
+    +"<div><h5>"+tytul+"</h5>"
+    +"<p>"+opis+"</p></div></div>"
+
+    $('.'+klasa+"-wpisy").append(content);
 }

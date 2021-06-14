@@ -133,3 +133,8 @@ article {
     background: var(--homeButton-color);
     border-radius: 40%;
 }
+
+.wpis {
+    display: flex;
+    flex-flow: row;
+}
