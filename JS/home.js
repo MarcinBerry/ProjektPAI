@@ -11,7 +11,7 @@ function homeInit() {
 }
 
 function testowaFunkcja() {
-    generujKontakt();
+    generujPrzycisk(".przyciski-box")
 }
 
 function generujKontakt() {
@@ -37,23 +37,32 @@ function generujInfo() {
 
 function generujFormularz() {
     var content = 
-    "<div id='formularz'>"
-    +"<form action='mailto:beatap@cs.pollub.pl' method='POST'>"
-    +"<label>Imię i nazwisko</label>"
+    "<form id='formularz' onsubmit='testowaFunkcja()' method='POST'>"
+    +"<div class='pole'>"
+    +"<label>Imię</label>"
     +"<input type='text' name='name' />"
+    +"</div>"
+    +"<div class='pole'>"
     +"<label>Nazwisko</label>"
-    +"<input type='text' name='name' />"
+    +"<input type='text' name='surname' />"
+    +"</div>"
+    +"<div class='pole'>"
     +"<label>E-mail</label>"
-    +"<input type='text' name='name' />"
+    +"<input type='text' name='email' />"
+    +"</div>"
+    +"<div class='pole'>"
     +"<label>Temat</label>"
-    +"<input type='text' name='name' />"
+    +"<input type='text' name='subject' />"
+    +"</div>"
+    +"<div class='pole'>"
     +"<label>Wiadomość</label>"
-    +"<input type='text' name='name' />"
-    +"<div id='submitbutton'></div>"
+    +"<textarea rows='8' cols='45' name='wiadomosc' id='wiadomosc'></textarea>"
+    +"</div>"
+    +"<div class='pole'>"
+    +"<input type='submit' id='submit'></input>"
+    +"</div>"
     +"</form>"
-    generujPrzycisk("#submitbutton", "javascript:this.form.submit()", "Wyślij")
     $('main').append(content)
-
 }
 
 function przejdzDo(strona) {
@@ -62,7 +71,7 @@ function przejdzDo(strona) {
         case 'wiecej': generujWiecej(); break;
         case 'projekty': generujProjekty(); break;
         case 'home': generujHome(); break;
-        case 'kontakt': generujKontkat(); break;
+        case 'kontakt': generujKontakt(); break;
         default: alert("coś poszło nie tak");
     }
 }
@@ -76,19 +85,26 @@ function generujHome() {
     }).fadeIn(500);
 }
 
-function generujPrzycisk(divBox, odnosnik, tytul) {
+function generujPrzycisk(divBox, odnosnik, tytul, kolor) {
     var htmlPrzycisku = '<div class="przyciski" '+odnosnik+'">'+tytul+'</div>'
     $(divBox).append(htmlPrzycisku);
 
-    var numerPrzycisku = $('.przyciski').length;
-    $('.przyciski:nth-child('+numerPrzycisku+')').css("background", "var(--color"+numerPrzycisku+")");
+    var numerPrzycisku = $(".przyciski").length;
+    
+    var kol = kolor;
+    if(kol === undefined){
+        kol = "var(--color"+numerPrzycisku+")";
+    }   
+
+    $('.przyciski:nth-child('+numerPrzycisku+')').css("background", kol);
     
     $('.przyciski:nth-child('+numerPrzycisku+')').mouseenter(function() {
         $(this).css("background", "transparent");
     });
 
     $('.przyciski:nth-child('+numerPrzycisku+')').mouseleave(function() {
-        $(this).css("background", "var(--color"+numerPrzycisku+")");
+        $(this).css("background", kol);
     });
 }
+
 

@@ -138,3 +138,31 @@ article {
     display: flex;
     flex-flow: row;
 }
+
+.pole {
+    display:flex;
+    flex-flow: column;
+    margin: 2.5%;
+    width: 45%;
+}
+input {
+    margin-top: 2%;
+    padding: 4%;
+}
+
+#kontakt {
+    flex-flow: row wrap;
+    min-height: 100%;
+    width: 75%;
+    margin: 5% auto 7% auto;
+}
+
+#formularz {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 35%;
+}
+#submit {
+    max-height: 50px;
+    max-width: 160px;
+}
