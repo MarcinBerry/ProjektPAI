@@ -14,26 +14,21 @@
     </head>
     <body onload="homeInit()">
         <nav>
-            <section onclick="przejdzDo('home')" id="homePrzycisk">
-                    <p>Bernecki Marcin</p>
-            </section>
-            <section onclick="testowaFunkcja()" id="testowyPrzycisk">
+            <img src="img/home.png" onclick="przejdzDo('home')" style="height: 60px">
+            <!--<section onclick="testowaFunkcja()" id="testowyPrzycisk">
                 <p>TEST</p>
-            </section>
-            <section>
-                <div class="przyciski-nav-box">
-                    <!--<div class="przyciski-nav" onclick="przejdzDo('wiecej.html')">Kontynuuj</div> -->
-                    <div class="przyciski-nav" onclick="przejdzDo('wiecej')">Więcej</div>
-                    <div class="przyciski-nav" onclick="przejdzDo('projekty')">Projekty</div>
-                    <div class="przyciski-nav" onclick="przejdzDo('kontakt')">Kontakt</div>
-                </div>
-            </section>
+            </section> -->
+            <div class="przyciski-nav-box">
+                <div class="przyciski-nav" onclick="przejdzDo('wiecej')">Więcej</div>
+                <div class="przyciski-nav" onclick="przejdzDo('projekty')">Projekty</div>
+                <div class="przyciski-nav" onclick="przejdzDo('kontakt')">Kontakt</div>
+            </div>
         </nav>
         <main id="home">
             <section>
                 <img id="profilowe" src="img/profilowe.png"/>
             </section>
-            <section>
+            <section class="przedstawienie">
                 <h1>Witaj</h1>
                 <h3>Trochę o mnie</h3>
                 <span id="test"></span>
@@ -54,9 +49,9 @@
             </section>
             <section> 
                 <h4>Follow Me</h4> <br/>
-                <div id="follows-img">
-                    <img class="logo" src="img/linkedin-ikona.png"/>
-                    <img class="logo" src="img/Twitter-logo.png"/>
+                <div id="follows-img-box">
+                    <img class="follows-img" src="img/linkedin-ikona.png"/>
+                    <img class="follows-img" src="img/Twitter-logo.png"/>
                 </div>
             </section>
             <section> 
