@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="CSS/home.css" type="text/css" />
         <link rel="stylesheet" href="CSS/projekty.css" type="text/css" />
+        <link rel="stylesheet" href="CSS/kontakt.css" type="text/css" />
+        <link rel="stylesheet" href="CSS/wiecej.css" type="text/css" />
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Advent+Pro&subset=latin,latin-ext'  type='text/css'/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,47 +17,44 @@
     </head>
     <body onload="homeInit()">
         <nav>
-            <img src="img/home.png" onclick="przejdzDo('home')" style="height: 60px">
-            <!--<section onclick="testowaFunkcja()" id="testowyPrzycisk">
-                <p>TEST</p>
-            </section> -->
-            <div class="przyciski-nav-box">
-                <div class="przyciski-nav" onclick="przejdzDo('wiecej')">Więcej</div>
-                <div class="przyciski-nav" onclick="przejdzDo('projekty')">Projekty</div>
-                <div class="przyciski-nav" onclick="przejdzDo('kontakt')">Kontakt</div>
+            <img id="nav-homebutton" src="img/home.png" onclick="przejdzDo('home')">
+            <div class="nav-buttons">
+                <div class="nav-button" onclick="przejdzDo('wiecej')">Więcej</div>
+                <div class="nav-button" onclick="przejdzDo('projekty')">Projekty</div>
+                <div class="nav-button" onclick="przejdzDo('kontakt')">Kontakt</div>
             </div>
         </nav>
         <main id="home">
             <section>
-                <img id="profilowe" src="img/profilowe.png"/>
+                <img id="profile-img" src="img/profilowe.png"/>
             </section>
-            <section class="przedstawienie">
-                <h1>Witaj</h1>
-                <h3>Trochę o mnie</h3>
-                <p id="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <section id="introduction-box">
+                <h1 id="introduction-title">Witaj</h1>
+                <h3 id="introduction-subtitle">Trochę o mnie</h3>
+                <p id="introduction-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Sed cras ornare arcu dui vivamus arcu felis bibendum. </p>
-                <div class="przyciski-box"></div>
+                <div class="buttons-box"></div>
             </section>
         </main>
         <hr/>
         <footer>
             <section>
-                <h4>Telefon</h4>
-                <p>123123123</p>
+                <h4 class="footer-subtitle">Telefon</h4>
+                <p class="footer-text">123123123</p>
             </section>
             <section> 
-                <h4>E-mail</h4>
-                <p>testmail@mail.com</p>
+                <h4 class="footer-subtitle">E-mail</h4>
+                <p class="footer-text">testmail@mail.com</p>
             </section>
             <section> 
-                <h4>Follow Me</h4> <br/>
+                <h4 class="footer-subtitle">Follow Me</h4> <br/>
                 <div id="follows-img-box">
                     <img class="follows-img" src="img/linkedin-ikona.png"/>
                     <img class="follows-img" src="img/Twitter-logo.png"/>
                 </div>
             </section>
             <section> 
-                <p>&copy 2021 By Marcin Bernecki</p>
+                <p class="footer-text">&copy 2021 By Marcin Bernecki</p>
             </section>
         </footer>
     </body>

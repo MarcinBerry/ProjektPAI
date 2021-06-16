@@ -1,6 +1,6 @@
 function generujKontakt() {
     $('main').fadeOut(500, function() {
-        $('main').html("").attr("id", "kontakt").css("flex-flow", "row");
+        $('main').html("").attr("id", "kontakt")/*.css("flex-flow", "row")*/;
         generujInfo();
         generujFormularz();
     }).fadeIn(500);

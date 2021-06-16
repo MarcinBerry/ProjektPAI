@@ -33,5 +33,5 @@ function generujProjekt(tytul, opis, zdjecie) {
     +'    </div>'
     +'</article>';
 
-    $('main').attr("id", "projekty").append(content).css("flex-flow", "column")
+    $('main').attr("id", "projekty").append(content)/*.css("flex-flow", "column")*/
 }

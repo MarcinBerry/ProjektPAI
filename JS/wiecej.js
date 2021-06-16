@@ -1,6 +1,6 @@
 function generujWiecej() {
     $('main').fadeOut(500, function() {
-        $('main').html("<h3>Wiecej</h3>").attr("id", "projekty").css("flex-flow", "column");
+        $('main').html("<h2>Więcej</h2>").attr("id", "projekty");
         generujRozdzial("doswiadczenie", "Mój Tytuł");
         generujWpis("doswiadczenie");
         generujWpis("doswiadczenie");
@@ -16,7 +16,7 @@ function generujRozdzial(klasa = "przykladowa", tytul = "Przykładowy tytuł") {
 
     $('main').append(content);
     $('.'+klasa+'-wpisy').css({"display": "flex", "flex-flow": "column"})
-    $('.'+klasa).css({"display": "flex", "flex-flow": "row", "justify-content": "space-between"});
+    /*$('.'+klasa).css({"display": "flex", "flex-flow": "row", "justify-content": "space-between"});*/
     
 }
 
