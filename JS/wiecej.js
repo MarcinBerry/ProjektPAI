@@ -10,7 +10,7 @@ function createMore() {
 function createChapter(id = "przykladowa", title = "Przykładowy tytuł") {
     var content = 
     "<section class='chapter' id='"+id+"'>"
-    +"<div class='"+id+"-title'><h4 class='admissions-title'>"+title+"</h4></div>"
+    +"<div class='"+id+"-title'><h3 class='admissions-title'>"+title+"</h3></div>"
     +"<div class='admissions' id='"+id+"-admissions'></div></section>"
     +"<hr style='width: 100%;'/>";
 
@@ -18,14 +18,14 @@ function createChapter(id = "przykladowa", title = "Przykładowy tytuł") {
 }
 
 function createEntry(id = "przykladowa",
-    data = "2020 - TEST",
-    tytul = "Przykładowy tytuł",
-    opis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.") 
+    date = "2020 - TEST",
+    title = "Przykładowy tytuł",
+    desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.") 
     {
     var content = 
-    "<div class='entry'><div><p class='entry-date'>"+data+"</p></div>"
-    +"<div class='entry-desc'><h5 class='entry-title'>"+tytul+"</h5>"
-    +"<p class='entry-text'>"+opis+"</p></div></div>"
+    "<div class='entry'><div><p class='entry-date'>"+date+"</p></div>"
+    +"<div class='entry-desc'><h4 class='entry-title'>"+title+"</h4>"
+    +"<p class='entry-text'>"+desc+"</p></div></div>"
 
     $(id).append(content);
 }

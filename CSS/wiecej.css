@@ -32,7 +32,6 @@ h2 {
     font-weight: 600;
     font-family: 'Work Sans', sans-serif;
 }
-
 .entry {
     display: flex;
     flex-flow: row;
@@ -46,7 +45,7 @@ h2 {
 .entry-desc {
     width: 90%;
 }
-*/
+/*
 .entry-title {
     margin: 0;
     font-size: 18px;
