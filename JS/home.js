@@ -3,52 +3,52 @@ var homeContent = "";
 function homeInit() {
     $(document).ready(function () { 
         homeContent = $('main').html();
-        generujPrzycisk(".buttons-box", "onclick=\"przejdzDo('wiecej')\"", "Więcej");
-        generujPrzycisk(".buttons-box", "onclick=\"przejdzDo('projekty')\"", "Projekty");
-        generujPrzycisk(".buttons-box", "onclick=\"przejdzDo('kontakt')\"", "Kontakt");
+        createButton(".buttons-box", "onclick=\"goTo('wiecej')\"", "Więcej");
+        createButton(".buttons-box", "onclick=\"goTo('projekty')\"", "Projekty");
+        createButton(".buttons-box", "onclick=\"goTo('kontakt')\"", "Kontakt");
         $('main').fadeIn(500).css("display","flex");
     });  
 }
 
-function przejdzDo(strona) {
-    switch(strona) 
+function goTo(page) {
+    switch(page) 
     {
-        case 'wiecej': generujWiecej(); break;
-        case 'projekty': generujProjekty(); break;
-        case 'home': generujHome(); break;
+        case 'wiecej': createMore(); break;
+        case 'projekty': createProjects(); break;
+        case 'home': createHome(); break;
         case 'kontakt': generujKontakt(); break;
         default: alert("coś poszło nie tak");
     }
 }
 
-function generujHome() {
+function createHome() {
     $('main').fadeOut(500, function() {
         $('main').html(homeContent).attr("id", "home");
-        generujPrzycisk(".buttons-box", "onclick=\"przejdzDo('wiecej')\"", "Wiecej");
-        generujPrzycisk(".buttons-box", "onclick=\"przejdzDo('projekty')\"", "Projekty");
-        generujPrzycisk(".buttons-box", "onclick=\"przejdzDo('kontakt')\"", "Kontakt");
+        createButton(".buttons-box", "onclick=\"goTo('wiecej')\"", "Wiecej");
+        createButton(".buttons-box", "onclick=\"goTo('projekty')\"", "Projekty");
+        createButton(".buttons-box", "onclick=\"goTo('kontakt')\"", "Kontakt");
     }).fadeIn(500);
 }
 
-function generujPrzycisk(divBox, odnosnik, tytul, kolor) {
+function createButton(divBox, reference, title, color) {
     var className = "home-button";
-    var htmlPrzycisku = '<div class="'+className+'" '+odnosnik+'">'+tytul+'</div>'
-    $(divBox).append(htmlPrzycisku);
+    var buttonHTML = '<div class="'+className+'" '+reference+'">'+title+'</div>'
+    $(divBox).append(buttonHTML);
 
-    var numerPrzycisku = $("."+className).length;
+    var buttonNr = $("."+className).length;
     
-    var kol = kolor;
-    if(kol === undefined){
-        kol = "var(--color"+numerPrzycisku+")";
+    var col = color;
+    if(col === undefined){
+        col = "var(--color"+buttonNr+")";
     }   
 
-    $('.'+className+':nth-child('+numerPrzycisku+')').css("background", kol);
+    $('.'+className+':nth-child('+buttonNr+')').css("background", col);
     
-    $('.'+className+':nth-child('+numerPrzycisku+')').mouseenter(function() {
+    $('.'+className+':nth-child('+buttonNr+')').mouseenter(function() {
         $(this).css("background", "transparent");
     });
 
-    $('.'+className+':nth-child('+numerPrzycisku+')').mouseleave(function() {
-        $(this).css("background", kol);
+    $('.'+className+':nth-child('+buttonNr+')').mouseleave(function() {
+        $(this).css("background", col);
     });
 }

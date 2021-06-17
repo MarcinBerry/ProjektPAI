@@ -1,4 +1,4 @@
-#projekty {
+#projects {
     display: none;
     flex-flow: column;
     min-height: 100%;
@@ -6,15 +6,20 @@
     margin: 5% auto 7% auto;
 }
 
-.projekt {
+.project {
     margin: 10% 0 0 0;
 }
-
-.opis-projektu {
+.projects-desc {
     width: 40%;
 }
-
-.zdjecie-projektu {
+.project-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 0;
+}
+.project-img-box {
     width: 490px;
     height: 330px;
 }

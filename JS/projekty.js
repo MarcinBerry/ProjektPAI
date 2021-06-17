@@ -1,16 +1,16 @@
-function generujProjekty() {
+function createProjects() {
     $('main').fadeOut(500, function() {
         $('main').html("<h1>Projekty</h1>");
         for(var i = 0; i < 3; i++) {
-            generujProjekt();
+            createProject();
         }
     }).fadeIn(500);
 }
 
-function generujProjekt(tytul, opis, zdjecie) {
-    var ty = tytul;
-    var op = opis;
-    var zd = zdjecie;
+function createProject(title, desc, img) {
+    var ty = title;
+    var op = desc;
+    var zd = img;
     
     if(ty === undefined) {
         ty = "Przykładowy tytuł";
@@ -23,15 +23,15 @@ function generujProjekt(tytul, opis, zdjecie) {
         zd = "projekt.jpg";
     }
 
-    var content = '<article class="projekt">'
-    +'    <div class="opis-projektu">'
-    +'      <h3>'+ty+'</h3>'
-    +'      <p>'+op+'</p>'
+    var content = '<article class="project">'
+    +'    <div class="projects-desc">'
+    +'      <h3 class="project-title">'+ty+'</h3>'
+    +'      <p class="project-text">'+op+'</p>'
     +'    </div>'
-    +'   <div class="zdjecie-projektu">'
+    +'   <div class="project-img-box">'
     +'       <img src="img/'+zd+'"/>'
     +'    </div>'
     +'</article>';
 
-    $('main').attr("id", "projekty").append(content)/*.css("flex-flow", "column")*/
+    $('main').attr("id", "projects").append(content);
 }

@@ -1,23 +1,23 @@
-function generujWiecej() {
+function createMore() {
     $('main').fadeOut(500, function() {
-        $('main').html("<h2>Więcej</h2>").attr("id", "projekty");
-        generujRozdzial("doswiadczenie", "Mój Tytuł");
-        generujWpis("#doswiadczenie-admissions");
-        generujWpis("#doswiadczenie-admissions");
+        $('main').html("<h2>Więcej</h2>").attr("id", "more");
+        createChapter("doswiadczenie", "Mój Tytuł");
+        createEntry("#doswiadczenie-admissions");
+        createEntry("#doswiadczenie-admissions");
     }).fadeIn(500);
 }
 
-function generujRozdzial(id = "przykladowa", tytul = "Przykładowy tytuł") {
+function createChapter(id = "przykladowa", title = "Przykładowy tytuł") {
     var content = 
     "<section class='chapter' id='"+id+"'>"
-    +"<div class='"+id+"-title'><h4 class='admissions-title'>"+tytul+"</h4></div>"
+    +"<div class='"+id+"-title'><h4 class='admissions-title'>"+title+"</h4></div>"
     +"<div class='admissions' id='"+id+"-admissions'></div></section>"
     +"<hr style='width: 100%;'/>";
 
     $('main').append(content);
 }
 
-function generujWpis(id = "przykladowa",
+function createEntry(id = "przykladowa",
     data = "2020 - TEST",
     tytul = "Przykładowy tytuł",
     opis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.") 
