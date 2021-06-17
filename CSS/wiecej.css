@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;600;700&display=swap');
+
 h2 {
     font-family: 'Work Sans', sans-serif;
     font-size: 42px;
@@ -7,11 +9,46 @@ h2 {
 .chapter {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 .admissions {
     display: flex;
     flex-flow: column;
+    width: 45%;
+}
+.admissions-title {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.entry {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.entry-date {
+    width: 110px;
+    margin: 0;
+}
+/*
+.entry-desc {
+    width: 90%;
+}
+*/
+.entry-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 0;
 
 }
+/*
+.entry-text {
+
+}
+*/
