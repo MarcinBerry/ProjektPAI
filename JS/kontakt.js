@@ -1,12 +1,12 @@
-function generujKontakt() {
+function createContact() {
     $('main').fadeOut(500, function() {
         $('main').html("<h2>Kontakt</h2><div id='contact-box'></div>").attr("id", "contact");
-        generujInfo('#contact-box');
-        generujFormularz('#contact-box');
+        createInfo('#contact-box');
+        createForm('#contact-box');
     }).fadeIn(500);
 }
 
-function generujInfo(divId) {
+function createInfo(divId) {
     var content = 
     "<div id='info'>"
     +"<h4 class='info-subtitle'>Telefon</h4>"
@@ -17,13 +17,13 @@ function generujInfo(divId) {
     $(divId).append(content)
 }
 
-function generujFormularz(divId) {
+function createForm(divId) {
     var content = 
-    "<form onsubmit='testowaFunkcja()' method='POST'>"
+    "<form onsubmit='formCheck()' method='POST'>"
     +"<div class='fields-box'>"
     +"<div class='field'>"
     +"<label>Imię</label>"
-    +"<input type='text' name='name' />"
+    +"<input type='text' name='name'/>"
     +"</div>"
     +"<div class='field'>"
     +"<label>Nazwisko</label>"
@@ -35,7 +35,12 @@ function generujFormularz(divId) {
     +"</div>"
     +"<div class='field'>"
     +"<label>Temat</label>"
-    +"<input type='text' name='subject' />"
+    +"<select size='1' name='subject'>"
+    +"<option value='tech'>Technologia</option>"
+    +"<option value='moto'>Motoryzacja</option>"
+    +"<option value='eko'>Ekologia</option>"
+    +"<option value='spo'>Sport</option>"
+    +"</select>"
     +"</div>"
     +"<div class='field'>"
     +"<label>Zainteresowania</label>"
@@ -48,12 +53,31 @@ function generujFormularz(divId) {
     +"<label><input type='radio' name='sex' value='m' />Mężczyzna</label>"
     +"<label><input type='radio' name='sex' value='k' />Kobieta</label>"
     +"</div>"
-    +"<div class='field' id='message'>"
+    +"<div class='field' id='message-div'>"
     +"<label>Wiadomość</label>"
-    +"<textarea rows='8' cols='45' name='wiadomosc' id='wiadomosc'></textarea>"
+    +"<textarea rows='8' cols='45' name='message' id='message'></textarea>"
     +"</div>"
     +"</div>"
     +"<input type='submit' id='submit-button'></input>"
     +"</form>"
     $(divId).append(content)
+}
+
+function formCheck() {
+    var name=$("input[name=name]").val();
+    var surname=$("input[name=surname]").val();
+    var email=$("input[name=email]").val();
+    var subject=$("option:selected").val();
+    var checkboxs=$("input:checkbox:checked").map(function() {
+        return $(this).val();
+    }).get();
+    var sex=$("input[name=sex]:checked").val();
+    var message=$("#message").val();
+
+    if(email < 3)
+        alert("Pole e-mail nie może być puste");
+
+    if(sex === undefined) {
+        alert("Pole płeć musi być zaznaczone");
+    }
 }

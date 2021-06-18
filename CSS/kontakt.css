@@ -34,10 +34,10 @@ form {
     margin: 2.5% 2.5% 2.5% 0;
     width: 47.5%;
 }
-#message {
+#message-div{
     flex-grow: 2;
 }
-input {
+input, select{
     margin-top: 2%;
     padding: 4%;
 }

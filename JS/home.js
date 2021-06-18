@@ -14,7 +14,7 @@ function goTo(page) {
         case 'wiecej': createMore(); break;
         case 'projekty': createProjects(); break;
         case 'home': createHome(); break;
-        case 'kontakt': generujKontakt(); break;
+        case 'kontakt': createContact(); break;
         default: alert("coś poszło nie tak");
     }
 }
