@@ -1,0 +1,35 @@
+#contact {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    min-height: 100%;
+    width: 75%;
+    margin: 5% auto 7% auto;
+}
+.info-subtitle {
+    margin: 0;
+}
+form {
+    display: flex;
+    flex-flow: column;
+    width: 45%;
+}
+.fields-box {
+    display: flex;
+    flex-flow: row wrap;
+}
+#submit {
+    max-height: 50px;
+    max-width: 160px;
+}
+
+.field {
+    display: flex;
+    flex-flow: column;
+    margin: 2.5% 2.5% 2.5% 0;
+    width: 47.5%;
+}
+input {
+    margin-top: 2%;
+    padding: 4%;
+}

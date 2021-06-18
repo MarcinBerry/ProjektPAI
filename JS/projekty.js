@@ -1,6 +1,6 @@
 function createProjects() {
     $('main').fadeOut(500, function() {
-        $('main').html("<h1>Projekty</h1>");
+        $('main').html("<h2>Projekty</h2>");
         for(var i = 0; i < 3; i++) {
             createProject();
         }

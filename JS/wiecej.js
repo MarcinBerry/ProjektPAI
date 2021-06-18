@@ -10,7 +10,7 @@ function createMore() {
 function createChapter(id = "przykladowa", title = "Przykładowy tytuł") {
     var content = 
     "<section class='chapter' id='"+id+"'>"
-    +"<div class='"+id+"-title'><h3 class='admissions-title'>"+title+"</h3></div>"
+    +"<h3 class='admission-title'>"+title+"</h3>"
     +"<div class='admissions' id='"+id+"-admissions'></div></section>"
     +"<hr style='width: 100%;'/>";
 
