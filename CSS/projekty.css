@@ -6,16 +6,15 @@
     margin: 5% auto 7% auto;
 }
 .project {
-    margin: 0 0 10% 0;
+    margin: 0 0 8% 0;
 }
 .projects-desc {
     width: 40%;
 }
-.project-img-box {
-    width: 490px;
-    height: 330px;
-}
 
+.project-img {
+    width: 490px;
+}
 .wpis {
     display: flex;
     flex-flow: row;

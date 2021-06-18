@@ -1,10 +1,15 @@
 #contact {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: space-between;
     min-height: 100%;
     width: 75%;
     margin: 5% auto 7% auto;
+}
+#contact-box {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
 }
 .info-subtitle {
     margin: 0;
@@ -28,6 +33,9 @@ form {
     flex-flow: column;
     margin: 2.5% 2.5% 2.5% 0;
     width: 47.5%;
+}
+#message {
+    flex-grow: 2;
 }
 input {
     margin-top: 2%;

@@ -1,9 +1,12 @@
 function createProjects() {
     $('main').fadeOut(500, function() {
         $('main').html("<h2>Projekty</h2>");
-        for(var i = 0; i < 3; i++) {
-            createProject();
-        }
+        createProject("PojektPAI", 
+        "Projekt strony robiony w trakcie studiów. Projekt jest zliczeniem końcowym z przedmioty Podstawy Aplikacji Internetowych"
+        ,"ProjektPAI-img.jpg");
+        createProject("ReNamer", 
+        "Mała aplikacja bez interfejsu graficznego, pomagająca zmieniać/ generować nazwy wedłych schematu. Projekt pisany w celu utałwenia i przyśpieszenia pracy na obecnym stanowisku", 
+        "ReNamer-img.jpg")
     }).fadeIn(500);
 }
 
@@ -29,7 +32,7 @@ function createProject(title, desc, img) {
     +'      <p class="project-text">'+op+'</p>'
     +'    </div>'
     +'   <div class="project-img-box">'
-    +'       <img src="img/'+zd+'"/>'
+    +'       <img class="project-img" src="img/'+zd+'"/>'
     +'    </div>'
     +'</article>';
 

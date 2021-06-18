@@ -1,5 +1,4 @@
 var homeContent = "";
-
 function homeInit() {
     $(document).ready(function () { 
         homeContent = $('main').html();
@@ -9,7 +8,6 @@ function homeInit() {
         $('main').fadeIn(500).css("display","flex");
     });  
 }
-
 function goTo(page) {
     switch(page) 
     {
@@ -20,7 +18,6 @@ function goTo(page) {
         default: alert("coś poszło nie tak");
     }
 }
-
 function createHome() {
     $('main').fadeOut(500, function() {
         $('main').html(homeContent).attr("id", "home");
@@ -29,7 +26,6 @@ function createHome() {
         createButton(".buttons-box", "onclick=\"goTo('kontakt')\"", "Kontakt");
     }).fadeIn(500);
 }
-
 function createButton(divBox, reference, title, color) {
     var className = "home-button";
     var buttonHTML = '<div class="'+className+'" '+reference+'">'+title+'</div>'

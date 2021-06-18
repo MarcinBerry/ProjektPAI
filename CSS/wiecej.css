@@ -25,11 +25,14 @@ h2 {
 }
 .admission-title {
     font-size: 26px;
+    margin: 0;
+    padding: 0;
 }
 .entry {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    margin: 10px 0 0 0;
 }
 .entry-date {
     width: 110px;
@@ -38,4 +41,8 @@ h2 {
 .entry-title {
     margin: 0;
     padding: 0;
+}
+.delimeter {
+    width: 100%;
+    margin: 15px 0 30px 0;
 }
