@@ -41,7 +41,9 @@ input, select{
     margin-top: 2%;
     padding: 4%;
 }
-
+.localStorage-info {
+    display: none;
+}
 @media screen and (max-width: 980px) {
     #contact-box {
         flex-flow: column;

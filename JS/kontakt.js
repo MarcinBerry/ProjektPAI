@@ -13,7 +13,7 @@ function createInfo(divId) {
     +"<p>123-123-123</p>"
     +"<h4 class='info-subtitle'>Email</h4>"
     +"<p>przykladowy@mail.com</p>"
-    +"</div>"
+
     $(divId).append(content)
 }
 
@@ -80,4 +80,11 @@ function formCheck() {
     if(sex === undefined) {
         alert("Pole płeć musi być zaznaczone");
     }
+    localStorage.setItem("name", name);
+    localStorage.setItem("surname", surname);
+    localStorage.setItem("email", email);
+    localStorage.setItem("subject", subject);
+    localStorage.setItem("hobby", checkboxs);
+    localStorage.setItem("sex", sex);
+    localStorage.setItem("message", message);
 }
