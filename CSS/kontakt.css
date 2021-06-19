@@ -41,3 +41,12 @@ input, select{
     margin-top: 2%;
     padding: 4%;
 }
+
+@media screen and (max-width: 980px) {
+    #contact-box {
+        flex-flow: column;
+    }
+    form {
+        width: 100%;
+    }
+}
